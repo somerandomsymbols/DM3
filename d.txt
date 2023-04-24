@@ -1,0 +1,37 @@
+A 4 3
+B 5 3
+C 5 4
+D 2 1
+E 4 1
+F 6 5
+G 1 5
+H 1 4
+I 5 5
+J 6 2
+
+Single-link
+[[[C], [D], [E], [F], [G], [H], [I], [J], [A, B]], [[D], [E], [F], [G], [H], [J], [A, B], [C, I]], [[D], [E], [G], [H], [J], [A, B], [F, C, I]], [[D], [E], [J], [A, B], [F, C, I], [G, H]], [[D], [E], [J], [G, H], [A, B, F, C, I]], [[D], [E], [G, H], [J, A, B, F, C, I]], [[G, H], [J, A, B, F, C, I], [D, E]], [[G, H], [J, A, B, F, C, I, D, E]], [[G, H, J, A, B, F, C, I, D, E]]]
+
+Complete-link
+[[[C], [D], [E], [F], [G], [H], [I], [J], [A, B]], [[D], [E], [F], [G], [H], [J], [A, B], [C, I]], [[D], [E], [F], [J], [A, B], [C, I], [G, H]], [[D], [E], [J], [A, B], [G, H], [F, C, I]], [[J], [A, B], [G, H], [F, C, I], [D, E]], [[G, H], [F, C, I], [D, E], [J, A, B]], [[G, H], [D, E], [F, C, I, J, A, B]], [[F, C, I, J, A, B], [G, H, D, E]], [[F, C, I, J, A, B, G, H, D, E]]]
+
+Average-link
+[[[C], [D], [E], [F], [G], [H], [I], [J], [A, B]], [[D], [E], [F], [G], [H], [J], [A, B], [C, I]], [[D], [E], [F], [J], [A, B], [C, I], [G, H]], [[D], [E], [J], [A, B], [G, H], [F, C, I]], [[D], [E], [G, H], [F, C, I], [J, A, B]], [[G, H], [F, C, I], [J, A, B], [D, E]], [[G, H], [D, E], [F, C, I, J, A, B]], [[G, H], [D, E, F, C, I, J, A, B]], [[D, E, F, C, I, J, A, B, G, H]]]
+
+k-Means: k = 3
+[[A, D, E, G, H], [B, J], [C, F, I]]
+[A, B, C]
+[[D, G, H], [B, J, A, E], [C, F, I]]
+[(2.4;2.8), (5.5;2.5), (5.333333333333333;4.666666666666667)]
+[[D, G, H], [B, J, A, E], [C, F, I]]
+[[D, G, H], [B, J, A, E], [C, F, I]]
+
+k-Medians: k = 3
+[[A, D, E, G, H], [B, J], [C, F, I]]
+[A, B, C]
+[[A, D, G, H], [B, J, E], [C, F, I]]
+[(2.0;3.0), (5.5;2.5), (5.0;5.0)]
+[[D, G, H], [B, J, E, A], [C, F, I]]
+[(1.5;3.5), (5.0;2.0), (5.0;5.0)]
+[[D, G, H], [B, J, E, A], [C, F, I]]
+[[D, G, H], [B, J, E, A], [C, F, I]]
